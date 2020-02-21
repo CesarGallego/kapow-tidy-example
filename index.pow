@@ -1,0 +1,8 @@
+#!/bin/bash
+
+kapow route add / - <<-'EOF'
+    cat howto.html | kapow set /response/body
+EOF
+
+source ./info_stuff.pow
+source ./other_endpoints.pow

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+kapow route add /info/mem - <<-'EOF'
+    free -m | kapow set /response/body
+EOF
+
+kapow route add /info/disk - <<-'EOF'
+    df -h | kapow set /response/body 
+EOF

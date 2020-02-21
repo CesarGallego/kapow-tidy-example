@@ -1,0 +1,5 @@
+#!/bin/bash
+
+kapow route add /other/tmp - <<-'EOF'
+    ls /tmp | kapow set /response/body
+EOF
